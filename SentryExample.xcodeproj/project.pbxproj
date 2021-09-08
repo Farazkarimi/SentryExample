@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7174B23C54773A155B560AD3 /* Pods_SentryExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6467BE79A81D659C0DCA3C /* Pods_SentryExample.framework */; };
 		D0F9A8ED26E8F6BA008C4CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8EC26E8F6BA008C4CAE /* AppDelegate.swift */; };
 		D0F9A8F126E8F6BA008C4CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8F026E8F6BA008C4CAE /* ViewController.swift */; };
 		D0F9A8F426E8F6BA008C4CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F9A8F226E8F6BA008C4CAE /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B6467BE79A81D659C0DCA3C /* Pods_SentryExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentryExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB96B8BBBDA00B6DA4314C5 /* Pods-SentryExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryExample.debug.xcconfig"; path = "Target Support Files/Pods-SentryExample/Pods-SentryExample.debug.xcconfig"; sourceTree = "<group>"; };
+		799A78EBA919B5163D184982 /* Pods-SentryExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryExample.release.xcconfig"; path = "Target Support Files/Pods-SentryExample/Pods-SentryExample.release.xcconfig"; sourceTree = "<group>"; };
 		D0F9A8E926E8F6BA008C4CAE /* SentryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F9A8EC26E8F6BA008C4CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F9A8F026E8F6BA008C4CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7174B23C54773A155B560AD3 /* Pods_SentryExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DC88F35741F97AB476B4010 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BB96B8BBBDA00B6DA4314C5 /* Pods-SentryExample.debug.xcconfig */,
+				799A78EBA919B5163D184982 /* Pods-SentryExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D0F9A8E026E8F6BA008C4CAE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				D0F9A90226E8F6BD008C4CAE /* SentryExampleTests */,
 				D0F9A90D26E8F6BD008C4CAE /* SentryExampleUITests */,
 				D0F9A8EA26E8F6BA008C4CAE /* Products */,
+				4DC88F35741F97AB476B4010 /* Pods */,
+				E04DA2C1F6BCDEE2D99C621E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = SentryExampleUITests;
 			sourceTree = "<group>";
 		};
+		E04DA2C1F6BCDEE2D99C621E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6467BE79A81D659C0DCA3C /* Pods_SentryExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F9A91326E8F6BD008C4CAE /* Build configuration list for PBXNativeTarget "SentryExample" */;
 			buildPhases = (
+				58DB013E844028178362CA90 /* [CP] Check Pods Manifest.lock */,
 				D0F9A8E526E8F6BA008C4CAE /* Sources */,
 				D0F9A8E626E8F6BA008C4CAE /* Frameworks */,
 				D0F9A8E726E8F6BA008C4CAE /* Resources */,
+				C16B7D6F2FB2753222F62B8E /* [CP] Embed Pods Frameworks */,
+				D0F9A91D26E91C22008C4CAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +276,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58DB013E844028178362CA90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentryExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16B7D6F2FB2753222F62B8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SentryExample/Pods-SentryExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SentryExample/Pods-SentryExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SentryExample/Pods-SentryExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0F9A91D26E91C22008C4CAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}\n",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which sentry-cli >/dev/null; then\nexport SENTRY_ORG=faraz-karimi\nexport SENTRY_PROJECT=faraz-karimi\nexport SENTRY_AUTH_TOKEN=2e499177d9cb407590db4e5093e342c8102f21d14de94d079c431213660b8965\nERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\nexport SENTRY_URL=https://mysentry.invalid/\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0F9A8E526E8F6BA008C4CAE /* Sources */ = {
@@ -429,6 +516,7 @@
 		};
 		D0F9A91426E8F6BD008C4CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BB96B8BBBDA00B6DA4314C5 /* Pods-SentryExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.faraz.geolocation.SentryExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faraz.geeolocation.SentryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +536,7 @@
 		};
 		D0F9A91526E8F6BD008C4CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 799A78EBA919B5163D184982 /* Pods-SentryExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.faraz.geolocation.SentryExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faraz.geeolocation.SentryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
